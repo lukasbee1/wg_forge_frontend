@@ -1,10 +1,10 @@
 import orders from '../data/orders.json';
-import user from './user.js';
+import { createUserInfo, createUserDetails } from './user';
 
 const createRow = (i) => {
     var tr = document.createElement('tr');
     tr.setAttribute('id', 'order_' + orders[i].id);
-
+    
     let transaction_id = document.createElement('td');
     let user_info = document.createElement('td');
     user_info.classList.add('user-data');
@@ -35,7 +35,8 @@ const createRow = (i) => {
     var parent = document.getElementsByTagName('tbody');
     parent[0].appendChild(tr);
     
-    user.createUserInfo(orders[i].user_id, i);
+    createUserInfo(orders[i].user_id, i);
+    
 }
 
 export default createRow;
