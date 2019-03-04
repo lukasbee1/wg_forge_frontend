@@ -24,7 +24,8 @@ const createUserInfo = (user_id, order) => {
 }
 
 const createUserDetails = (user_id, order) => {
-
+    let status = false;
+    status 
     let userDetails = document.createElement('div');
 
     let i;
@@ -56,8 +57,7 @@ const createUserDetails = (user_id, order) => {
 
 
     let parent = document.getElementsByClassName('user-data');
-    console.log(i);
-    console.log(parent);
     parent[order].appendChild(userDetails);
 }
+
 export {createUserDetails, createUserInfo};

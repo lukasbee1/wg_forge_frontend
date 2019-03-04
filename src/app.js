@@ -10,7 +10,10 @@ export default (function () {
         createRow(i);
         i++;
     });
+    window.createUserDetails = createUserDetails;
     document.getElementById("app");
 }());
-createUserDetails(1,1);
+function uclicked() {
 
+  }
+  window.uclicked = uclicked;
